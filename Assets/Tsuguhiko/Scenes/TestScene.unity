@@ -684,6 +684,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1515601720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7337719739592986057, guid: cafb3d4354fc6e7429c59c25669d4f7d, type: 3}
+  m_PrefabInstance: {fileID: 316827902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1515601721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4782103177258459572, guid: cafb3d4354fc6e7429c59c25669d4f7d, type: 3}
+  m_PrefabInstance: {fileID: 316827902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515601720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676273367
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676273368}
   - component: {fileID: 1676273369}
+  - component: {fileID: 1676273370}
   m_Layer: 0
   m_Name: EmptyObject
   m_TagString: Untagged
@@ -733,6 +750,21 @@ MonoBehaviour:
   - {fileID: 64227735}
   - {fileID: 1326716174}
   _isClicked: 000000
+--- !u!114 &1676273370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676273367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796bbd10b9c49294a8da82afb2cb1c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageToFade: {fileID: 1515601721}
+  _fadeInDuration: 3
+  _fadeObject: {fileID: 1515601720}
 --- !u!1 &1727791207
 GameObject:
   m_ObjectHideFlags: 0
