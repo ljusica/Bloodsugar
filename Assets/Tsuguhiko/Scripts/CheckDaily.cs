@@ -9,7 +9,7 @@ public class CheckDaily : MonoBehaviour
     [SerializeField,Header("Date")] DailyChapter _dailyChapter;
     void Start()
     {
-         Debug.Log(_dailyChapter.ToString());
+         //Debug.Log(_dailyChapter.ToString());
     }
 
 }

@@ -28,10 +28,10 @@ public class GameManager
         LoadGameData();
     }
 
-    public void MyFunction()
-    {
-        Debug.Log("Function called from GameManager");
-    }
+    //public void MyFunction()
+    //{
+    //    Debug.Log("Function called from GameManager");
+    //}
 
     private void LoadGameData()
     {
@@ -39,8 +39,5 @@ public class GameManager
         _researchObjectManager = GameObject.Find("EmptyObject").GetComponent<ResearchObjectManager>();
 
         _researchObjectManager.ResearchObjects[0].SetActive(true);
-        _researchObjectManager.ResearchObjects[1].SetActive(false);
-        _researchObjectManager.ResearchObjects[2].SetActive(false);
-
     }
 }
