@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ResearchObjectManager : MonoBehaviour
 {
+    public delegate void ItemClicked();
+    public static event ItemClicked itemClicked;
+
     [SerializeField] GameObject[] _researchObjects;
 
     [SerializeField] bool[] _isClicked;
@@ -26,9 +29,18 @@ public class ResearchObjectManager : MonoBehaviour
     }
     public void OnClickEvent()
     {
-        if (_researchObjects[0] && _isClicked[0] == false)
+        for (int i = 0; i < _researchObjects.Length; i++)
         {
-            _isClicked[0] = true;
+            if (_researchObjects[i].gameObject.activeSelf && !_isClicked[i])
+            {
+                _isClicked[i] = true;
+                itemClicked?.Invoke();
+            }
         }
+
+        //if (_researchObjects[0] && _isClicked[0] == false)
+        //{
+        //    _isClicked[0] = true;
+        //}
     }
 }
