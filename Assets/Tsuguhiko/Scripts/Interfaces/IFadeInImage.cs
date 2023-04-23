@@ -8,4 +8,5 @@ public interface IFadeInImage
 {
     IEnumerator FadeIn();
 
+    IEnumerator FadeOut();
 }
