@@ -10,9 +10,12 @@ public class Diary : MonoBehaviour
     public GameObject flipForwardsButton;
     public GameObject flipBackwardsButton;
 
+    public AudioSource[] diaryReadings;
+
     private GameObject[] enabledDiaryNotes;
 
     bool[] noteEnabled = { false, false, false, false, false, false, false };
+    bool[] audioPlayed = { false, false, false, false, false, false, false };
 
     private void Start()
     {
@@ -28,6 +31,12 @@ public class Diary : MonoBehaviour
         if (enabledDiaryNotes[0] == diaryNotes[0])
         {
             enabledDiaryNotes[0].gameObject.SetActive(diary.gameObject.activeSelf);
+
+            if (!audioPlayed[0])
+            {
+                diaryReadings[0].Play();
+                audioPlayed[0] = true;
+            }
 
             if (noteEnabled[1]) { flipForwardsButton.gameObject.SetActive(true); }
         }
@@ -59,6 +68,12 @@ public class Diary : MonoBehaviour
 
                     if ((i + 1) <= enabledDiaryNotes.Length && noteEnabled[i + 1] != false)
                     {
+                        if (!audioPlayed[i + 1])
+                        {
+                            diaryReadings[i + 1].Play();
+                            audioPlayed[i + 1] = true;
+                        }
+
                         enabledDiaryNotes[i + 1].gameObject.SetActive(true);
                         flipBackwardsButton.gameObject.SetActive(true);
 
